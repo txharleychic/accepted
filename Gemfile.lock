@@ -147,7 +147,7 @@ DEPENDENCIES
   rspec
   rspec-rails (>= 2.0.1)
   sass-rails (~> 3.2.3)
-  spork
+  spork (>= 0.8.4)
   sqlite3
   uglifier (>= 1.0.3)
   webrat

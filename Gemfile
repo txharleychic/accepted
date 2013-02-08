@@ -20,7 +20,7 @@ group :test do
 	gem 'rspec-rails', ">= 2.0.1"
 	gem 'rspec'
 	gem 'webrat'
-	gem 'spork'
+	gem 'spork', ">= 0.8.4"
 	gem 'factory_girl_rails'
 end
 

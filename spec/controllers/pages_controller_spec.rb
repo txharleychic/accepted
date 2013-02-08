@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe PagesController do
+  render_views    # this ensures rspec checks that the page exists
 
   describe "GET 'home'" do
     it "returns http success" do
