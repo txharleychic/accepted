@@ -7,6 +7,24 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 
+gem 'gravatar_image_tag'
+
+group :development do
+	gem "rspec-rails", ">= 2.0.1"
+	gem "autotest", "~> 4.4.6"
+	gem "webrat"
+	gem 'annotate'
+end
+
+group :test do
+	gem 'rspec-rails', ">= 2.0.1"
+	gem 'rspec'
+	gem 'webrat'
+	gem 'spork'
+	gem 'factory_girl_rails'
+end
+
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,11 +55,3 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-group :development do
-	gem 'rspec-rails'
-end
-
-group :test do
-	gem 'rspec'
-	gem 'webrat'
-end
