@@ -17,8 +17,8 @@ describe "LayoutLinks" do
 		response.should have_selector('title', :content => "About")
 	end
 
-	it "should have a Sign In page at '/sign_in'" do
-		get '/sign_in'
+	it "should have a Sign In page at '/signin'" do
+		get '/signin'
 		response.should have_selector('title', :content => "Sign In")
 	end
 
@@ -36,7 +36,6 @@ describe "LayoutLinks" do
 		get '/signup'
 		response.should have_selector('title', :content => "Sign up")
 	end
-
 
 
   describe "GET /layout_links" do
