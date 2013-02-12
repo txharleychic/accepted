@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Accepted</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+  	<title>theAccepted.org | <%= @title %></title>
+  	<%= csrf_meta_tag %> #prevents cross-site request forgery
+  </head>
+  <body>
+  	<%= yield %>  #see notes below...
+  </body>
 </html>
+
+
+# the "yield" line above (line 8 as of this note) inserts the contents of each page into the layout
+
