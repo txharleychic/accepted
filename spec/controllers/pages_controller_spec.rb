@@ -3,6 +3,10 @@ require 'spec_helper'
 describe PagesController do
   render_views    # this ensures rspec checks that the page exists
 
+  before (:each) do
+    @base_title = 'theAccepted.org'
+  end
+
   describe "GET 'home'" do
     it "returns http success" do
       get 'home'
@@ -11,7 +15,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'home'
-      response.should have_selector("title", :content => "theAccepted.org | Home")
+      response.should have_selector("title", :content => @base_title + " | Home")
     end
 
   end
@@ -24,7 +28,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'contact'
-      response.should have_selector("title", :content => "theAccepted.org | Contact")
+      response.should have_selector("title", :content => @base_title + " | Contact")
     end
 
   end
@@ -37,7 +41,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'profile'
-      response.should have_selector("title", :content => "theAccepted.org | Profile")
+      response.should have_selector("title", :content => @base_title + " | Profile")
     end
 
   end
@@ -50,7 +54,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'sign_in'
-      response.should have_selector("title", :content => "theAccepted.org | Sign In")
+      response.should have_selector("title", :content => @base_title + " | Sign In")
     end
 
   end
@@ -63,7 +67,7 @@ describe PagesController do
 
     it "should have the right title" do
       get 'about'
-      response.should have_selector("title", :content => "theAccepted.org | About")
+      response.should have_selector("title", :content => @base_title + " | About")
     end
 
   end

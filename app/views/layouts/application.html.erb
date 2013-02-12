@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>theAccepted.org | <%= @title %></title>
-  	<%= csrf_meta_tag %> #prevents cross-site request forgery
+  	<title><%= @title %></title>
+  	<%= csrf_meta_tag %> <!-- #prevents cross-site request forgery -->
+  	<%= render 'layouts/stylesheets' %>
   </head>
   <body>
-  	<%= yield %>  #see notes below...
+  	<div class="container">
+		<%= render 'layouts/header' %>
+		<section> 
+			<% flash.each do |key, value| %>
+				<div class="flash <%= key %>"><%= value %> </div>
+				<% end %>	
+  				<%= yield %>  <!--# see notes below... -->
+  			</section>
+  		<%= render 'layouts/footer' %>
+		<%= debug(params) if Rails.env.development? %>
+	</div>	
   </body>
 </html>
 
 
-# the "yield" line above (line 8 as of this note) inserts the contents of each page into the layout
+<!--# the "yield" line above (line 8 as of this note) inserts the contents of each page into the layout -->
 
