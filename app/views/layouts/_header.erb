@@ -1,0 +1,16 @@
+<header>
+	<!-- this does not work - syntax error - look up solution -->
+	<!--% logo = image_tag("SqCompFM_logo.png", alt: => "Masonic Logo") % -->
+	<%= link_to logo, root_path %>
+	<nav>
+		<ul>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "About", about_path %></li>
+			<!--% if signed_in? %>
+			<li><!--%= link_to "Sign out", signout_path, :method => :delete %></li>
+			<!--% else %>
+			<li><%= link_to "Sign In", signin_path %></li>
+			<!--% end %>
+		</ul>
+	</nav>
+</header>

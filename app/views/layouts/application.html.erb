@@ -12,8 +12,8 @@
 			<% flash.each do |key, value| %>
 				<div class="flash <%= key %>"><%= value %> </div>
 				<% end %>	
-  				<%= yield %>  <!--# see notes below... -->
-  			</section>
+  			<%= yield %>  <!--# see notes below... -->
+  		</section>
   		<%= render 'layouts/footer' %>
 		<%= debug(params) if Rails.env.development? %>
 	</div>	
